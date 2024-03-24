@@ -4,6 +4,7 @@ import { Text } from "react-font";
 import { motion } from "framer-motion"
 import Nav from "./components/nav";
 export default function Home() {
+  const { scene } = useGLTF('/sofa.glb')
   return (
     <motion.section className="w-[70rem] h-[90%]">
       <div className="flex w-full h-fit">
