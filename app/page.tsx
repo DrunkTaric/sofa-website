@@ -8,11 +8,11 @@ import Credits from "./components/credits";
 
 export default function Home() {
   return (
-    <motion.section className="w-[70rem] h-[90%]">
+    <section className="w-[70rem] h-[90%]">
       <div className="flex w-full h-fit">
         <Text family='Lexend' className="text-[8rem] m-auto font-extrabold text-gray-300 tracking-widest">SOFA</Text >
       </div>
-      <div className="bg-white w-full h-full rounded-3xl shadow-2xl shadow-black/50 p-5">
+      <motion.div className="bg-white w-full h-full rounded-3xl shadow-2xl shadow-black/50 p-5" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{duration: 4}}>
         <div className="rounded-2xl bg-[#f7f7f7] w-full h-full p-5">
           <Nav></Nav>
           <div className="absolute right-[50%] translate-x-[50%] flex flex-col pt-16 pb-16 w-full space-y-14 z-20">
@@ -24,8 +24,8 @@ export default function Home() {
           </div>
           <Model></Model>
         </div>
-      </div>
+      </motion.div>
       <Credits></Credits>
-    </motion.section>
+    </section>
   );
 }
