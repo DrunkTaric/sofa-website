@@ -1,7 +1,7 @@
 import { Text } from "react-font"
 
 export default function Nav() {
-    return (
+   return (
         <div className="w-full h-fit grid grid-cols-4">
             <Text family='Viga' className="text-lg ml-0 mr-auto font-extrabold text-black tracking-widest">SOFA</Text >
             <div className="grid grid-cols-5 col-span-2">
