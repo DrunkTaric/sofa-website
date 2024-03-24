@@ -2,6 +2,7 @@
 
 import { Text } from "react-font";
 import { motion } from "framer-motion"
+import Nav from "./components/nav";
 export default function Home() {
   return (
     <motion.section className="w-[70rem] h-[90%]">
@@ -10,6 +11,7 @@ export default function Home() {
       </div>
       <div className="bg-white w-full h-full rounded-t-3xl shadow-2xl shadow-black/50 p-5">
         <div className="rounded-2xl bg-[#f7f7f7] w-full h-full p-5">
+          <Nav></Nav>
           </Canvas>
         </div>
       </div>
