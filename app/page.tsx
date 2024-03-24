@@ -3,6 +3,9 @@
 import { Text } from "react-font";
 import { motion } from "framer-motion"
 import Nav from "./components/nav";
+import { Canvas } from '@react-three/fiber'
+import { PresentationControls, Stage, useGLTF } from "@react-three/drei"
+
 export default function Home() {
   const { scene } = useGLTF('/sofa.glb')
   return (
@@ -20,6 +23,12 @@ export default function Home() {
             </div>
             <button className="ml-auto mr-auto p-12 pt-1 pb-1 border-black border font-semibold">Check Out</button>
           </div>
+          <Canvas className="mt-0 mb-auto w-full max-h-[20re]" style={{display: "flex"}}>
+            <PresentationControls>
+              <Stage>
+                <primitive object={scene}/>
+              </Stage>
+            </PresentationControls>
           </Canvas>
         </div>
       </div>
